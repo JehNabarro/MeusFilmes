@@ -4,15 +4,93 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/bg_principal">
 
-    <TextView
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="245dp"
+        android:layout_height="192dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/logo"
+        android:contentDescription="Logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+        <android.support.v7.widget.CardView
+            style="@style/Base.V7.Widget.AppCompat.EditText.Card"
+            android:layout_width="260dp">
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/login"
+                    android:contentDescription="login"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    />
+
+                <EditText
+                    android:id="@+id/editLogin"
+                    style="@style/Base.V7.Widget.AppCompat.EditText.Edit"
+                    android:layout_width="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPassword"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            style="@style/Base.V7.Widget.AppCompat.EditText.Card"
+            android:layout_width="260dp">
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/senha"
+                    android:contentDescription="senha"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    />
+
+                <EditText
+                    android:id="@+id/editSenha"
+                    style="@style/Base.V7.Widget.AppCompat.EditText.Edit"
+                    android:layout_width="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPassword"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v7.widget.CardView>
+        <Button
+            style="@style/Base.TextAppearance.AppCompat.Button.Btn"
+            android:text="@string/cadastro"/>
+
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

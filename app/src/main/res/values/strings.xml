@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MeusFilmes</string>
+    <string name="cadastro">Cadastro</string>
+    <string name="esqueci_senha">Esqueci a Senha</string>
 </resources>
