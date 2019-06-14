@@ -32,4 +32,10 @@
         <item name="android:background">@android:color/transparent</item>
         <item name="android:textColor">@color/colorAccent</item>
     </style>
+
+    <style name="Titulo">
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textAlignment">center</item>
+    </style>
 </resources>

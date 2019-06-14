@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="128dp"
+    android:paddingBottom="16dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"
+        android:background="@drawable/bg_list"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="0dp">
+
+        <TextView
+            android:id="@+id/tituloFilme"
+            style="@style/Titulo"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="8dp"
+            android:lines="2"
+            android:text="MIB: Homens de Preto Internacional"
+            android:textAlignment="textStart"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/potuacaoFilme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pontuação: 6.2"
+            android:textColor="#9D9D9D"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/tituloFilme"
+            app:layout_constraintTop_toBottomOf="@+id/tituloFilme" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <ImageView
+        android:layout_width="75dp"
+        android:layout_height="114dp"
+        android:layout_marginStart="24dp"
+        android:src="@drawable/movie_01"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

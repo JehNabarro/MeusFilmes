@@ -2,4 +2,7 @@
     <string name="app_name">MeusFilmes</string>
     <string name="cadastro">Cadastro</string>
     <string name="esqueci_senha">Esqueci a Senha</string>
+    <string name="titulo_lista">Lista de Filmes</string>
+    <string name="titulo_lista_fav">Filmes Favoritos</string>
+    <string name="listagem">(Mais Populares)</string>
 </resources>
