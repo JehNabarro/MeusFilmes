@@ -1,7 +1,8 @@
-package com.example.nabarro.meusfilmes
+package com.example.nabarro.meusfilmes.Views
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.example.nabarro.meusfilmes.R
 
 class MainActivity : AppCompatActivity() {
 
