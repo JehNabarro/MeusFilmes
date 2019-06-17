@@ -1,4 +1,4 @@
-package com.example.nabarro.meusfilmes.Adapter
+package com.example.nabarro.meusfilmes.adapter
 
 import android.content.Context
 import android.support.v7.widget.RecyclerView
@@ -11,13 +11,11 @@ import com.example.nabarro.meusfilmes.R
 import kotlinx.android.synthetic.main.line_list.view.*
 
 class FilmListAdapter(private val notes: List<Filmes>,
-                        private val context: Context) : Adapter<FilmListAdapter.ViewHolder>() {
+                        private val context: Context) : RecyclerView.Adapter<FilmListAdapter.ViewHolder>() {
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val note = notes[position]
-        holder?.let {
-            it.bindView(note)
-        }
+        holder.setData(note)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -36,9 +34,14 @@ class FilmListAdapter(private val notes: List<Filmes>,
             val pontuacao = itemView.potuacaoFilme
 
             title.text = note.title
-            pontuacao.text = note.desc
+            pontuacao.text = note.vote_average
         }
 
+        fun setData(note: Filmes?){
+
+            itemView.tituloFilme.text = note!!.title
+            itemView.potuacaoFilme.text = note!!.vote_average
+        }
     }
 
 }

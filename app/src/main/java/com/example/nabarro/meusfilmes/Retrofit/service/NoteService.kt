@@ -5,7 +5,7 @@ import retrofit2.Call
 import retrofit2.http.GET
 
 interface NoteService {
-    @GET("filmes")
-
+    @GET("/3/movie/popular")
     fun list() : Call<List<Filmes>>
 }
+

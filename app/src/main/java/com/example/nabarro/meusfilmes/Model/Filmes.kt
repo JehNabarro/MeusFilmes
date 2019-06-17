@@ -5,8 +5,8 @@ class Filmes {
 
     var id : Int = 0
     var title : String? = null
-    var desc : String? = null
-    var genero : String? = null
-    var pontos : String? = null
-    var img : String? = null
+    var overview : String? = null
+    var genre_ids : String? = null
+    var vote_average : String? = null
+    var poster_path : String? = null
 }

@@ -2,9 +2,10 @@ package com.example.nabarro.meusfilmes.Views
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.StaggeredGridLayoutManager
 import android.util.Log
-import com.example.nabarro.meusfilmes.Adapter.FilmListAdapter
+import com.example.nabarro.meusfilmes.adapter.FilmListAdapter
 import com.example.nabarro.meusfilmes.Model.Filmes
 import com.example.nabarro.meusfilmes.R
 import com.example.nabarro.meusfilmes.Retrofit.RetrofitInitializer
@@ -39,10 +40,14 @@ class FilmesListaActivity : AppCompatActivity() {
     }
 
     private fun configureList(notes: List<Filmes>) {
-        val recyclerView = recycler_films
-        recyclerView.adapter = FilmListAdapter(notes, this)
-        val layoutManager = StaggeredGridLayoutManager(
-                2, StaggeredGridLayoutManager.VERTICAL)
-        recyclerView.layoutManager = layoutManager
+
+        val layoutManager = LinearLayoutManager( this)
+        layoutManager.orientation = LinearLayoutManager.HORIZONTAL
+
+        recycler_films.layoutManager = layoutManager
+
+        val adapter = FilmListAdapter(notes, this)
+        recycler_films.adapter = adapter
+
     }
 }

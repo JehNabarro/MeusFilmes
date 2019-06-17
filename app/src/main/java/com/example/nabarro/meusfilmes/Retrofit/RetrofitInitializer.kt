@@ -3,10 +3,14 @@ package com.example.nabarro.meusfilmes.Retrofit
 import com.example.nabarro.meusfilmes.Retrofit.service.NoteService
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.http.GET
+import retrofit2.http.Query
+import java.util.*
+
 
 class RetrofitInitializer {
     private val retrofit = Retrofit.Builder()
-            .baseUrl("http://api.themoviedb.org/3/movie/popular?api_key=a439c36c31622f0eef5cebc0dd6dbafd&language=pt-BR&page=1")
+            .baseUrl("http://encurtador.com.br")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 
